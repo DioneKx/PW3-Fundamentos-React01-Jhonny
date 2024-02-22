@@ -1,0 +1,15 @@
+/* Style para o componente BookCard*/
+
+.BookCard-cape {
+    height: 400px;
+    width: 250px;
+}
+
+.BookCard-content {
+    padding: 5px;
+    background-color: #DEDEDE;
+    width: 400px;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+}
