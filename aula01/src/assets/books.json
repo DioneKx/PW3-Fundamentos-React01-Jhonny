@@ -5,6 +5,7 @@
       "titulo_livro": "As Cavernas de Aço",
       "autor": "Isaac Asimov",
       "preco_livro": 90.00,
+      "descricao": "As Cavernas de Aço, de Isaac Asimov, é o primeiro romance da consagrada Série dos Robôs, uma das mais populares da ficção científica. A história nasceu de um desafio: Asimov queria provar para seu editor que a ficção científica não era limitada e poderia ser incorporada a qualquer gênero literário, inclusive nos dramas policiais.",
       "imagem_livro": "./assets/imgs/books/cavernas_aco.jpg"
     },
     {
@@ -12,6 +13,7 @@
       "titulo_livro": "O Sol Desvelado",
       "autor": "Isaac Asimov",
       "preco_livro": 90.00,
+      "descricao": "Um homem morto, um robô danificado e um crime sem solução. Convocado para uma reunião em Washington, Elijah Baley descobre que foi escalado para investigar um novo crime. Desta vez, porém, o policial deverá deixar a segurança da Terra e enfrentar sua fobia de espaços abertos.",
       "imagem_livro": "./assets/imgs/books/sol_desvelado.jpg"
     },
     {
@@ -19,6 +21,7 @@
       "titulo_livro": "Robôs da Alvorada",
       "autor": "Isaac Asimov",
       "preco_livro": 90.00,
+      "descricao": "Em meio à mais evoluída colônia humana fora da Terra, ocorre um crime sem precedentes: um robô humaniforme é assassinado, colocando em xeque a reputação de um importante estudioso daquele planeta, único suspeito do crime.",
       "imagem_livro": "./assets/imgs/books/robos_alvorada.jpg"
     },
     {
@@ -26,6 +29,7 @@
       "titulo_livro": "Robôs e o Império",
       "autor": "Isaac Asimov",
       "preco_livro": 90.00,
+      "descricao": "A humanidade evoluiu muito a partir então, e, para desgosto dos Siderais, o plano delineado por Baley finalmente começa a dar certo. Mas o universo se encontra em um impasse, enquanto cientistas poderosos e vingativos ameaçam destruir a Terra e tudo o que ela representa.",
       "imagem_livro": "./assets/imgs/books/robos_imperio.jpg"
     },
     {
@@ -33,6 +37,7 @@
       "titulo_livro": "Poeira de Estrelas",
       "autor": "Isaac Asimov",
       "preco_livro": 90.00,
+      "descricao": "Quando o jovem Biron Farrill descobre que seu pai foi assassinado e que sua própria vida corre perigo, decide partir em uma missão perigosa para encontrar respostas e achar os culpados. Ele não imagina, porém, que sua busca o lançará em uma obscura trama de revoltas, conspirações políticas e espionagem.",
       "imagem_livro": "./assets/imgs/books/poeira_estrelas.jpg"
     },
     {
@@ -40,63 +45,8 @@
       "titulo_livro": "As Correntes do Espaço",
       "autor": "Isaac Asimov",
       "preco_livro": 90.00,
+      "descricao":"Em um futuro distante, os poderosos de Sark enriquecem à custa de Florina, um planeta vizinho cujos habitantes são subjugados e trabalham incessantemente para produzir o valioso kyrt, matéria-prima disputada por todos os planetas. Rebelar-se é impensável. Rik é um homem sem memória e sem passado que trabalha em uma fábrica no planeta Florina.",
       "imagem_livro": "./assets/imgs/books/correntes_espaco.jpg"
-    },
-    {
-      "codigo_livro": 7,
-      "titulo_livro": "Pedra no Céu",
-      "autor": "Isaac Asimov",
-      "preco_livro": 90.00,
-      "imagem_livro": "./assets/imgs/books/pedra_ceu.jpg"
-    },
-    {
-      "codigo_livro": 8,
-      "titulo_livro": "Prelúdio à Fundação",
-      "autor": "Isaac Asimov",
-      "preco_livro": 90.00,
-      "imagem_livro": "./assets/imgs/books/fundacao_preludio.jpg"
-    },
-    {
-      "codigo_livro": 9,
-      "titulo_livro": "Origens da Fundação",
-      "autor": "Isaac Asimov",
-      "preco_livro": 90.00,
-      "imagem_livro": "./assets/imgs/books/fundacao_origem.jpg"
-    },
-    {
-      "codigo_livro": 10,
-      "titulo_livro": "Fundação",
-      "autor": "Isaac Asimov",
-      "preco_livro": 90.00,
-      "imagem_livro": "./assets/imgs/books/fundacao.jpg"
-    },
-    {
-      "codigo_livro": 11,
-      "titulo_livro": "Fundação e Império",
-      "autor": "Isaac Asimov",
-      "preco_livro": 90.00,
-      "imagem_livro": "./assets/imgs/books/fundacao_imperio.jpg"
-    },
-    {
-      "codigo_livro": 12,
-      "titulo_livro": "Segunda Fundação",
-      "autor": "Isaac Asimov",
-      "preco_livro": 90.00,
-      "imagem_livro": "./assets/imgs/books/fundacao_segunda.jpg"
-    },
-    {
-      "codigo_livro": 13,
-      "titulo_livro": "Limites da Fundação",
-      "autor": "Isaac Asimov",
-      "preco_livro": 90.00,
-      "imagem_livro": "./assets/imgs/books/fundacao_limites.jpg"
-    },
-    {
-      "codigo_livro": 14,
-      "titulo_livro": "Fundação e a Terra",
-      "autor": "Isaac Asimov",
-      "preco_livro": 90.00,
-      "imagem_livro": "./assets/imgs/books/fundacao_terra.jpg"
     }
   ]
 }

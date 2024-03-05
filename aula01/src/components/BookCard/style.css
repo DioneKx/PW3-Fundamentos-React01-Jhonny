@@ -9,21 +9,45 @@
 }
 
 .BookCard-cape {
-    height: 400px;
+    height: 90%;
     width: 250px;
 }
 
-.BookCard-content {
-    padding: 5px;
-    background-color: #DEDEDE;
-    width: 400px;
-    border-radius: 10px;
-    margin: 10px;
+.BookCard-content-img {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.BookCard-container-info {
+    height: 100%;
+    width: 50%;
     text-align: center;
 }
 
+.BookCard-content-info {
+    text-align: center;
+    padding: 5%;
+}
+
+.BookCard-content {
+    flex-direction: row;
+    flex: auto;
+    display: flex;
+    padding: 5px;
+    height: 450px;
+    background-color: #DEDEDE;
+    width: 45%;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    justify-content: left;
+}
+
 .BookCard-button {
-    width: 390px;
+    width: 90%;
     height: 40px;
     border-radius: 15px;
     font-weight: bold;
@@ -32,4 +56,10 @@
     border-color: black;
     padding: 10px;
     margin: 5px;
+}
+
+.BookCard-content-button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }

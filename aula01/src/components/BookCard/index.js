@@ -20,23 +20,44 @@ const imgs = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11
 
 function BookCard() {
   const booksMap = json.books.map((e) => {
-    const way = "../." + e.imagem_livro;
 
     return (
       <div className="BookCard-content">
-        <h3>{`Título: ${e.titulo_livro} (${e.codigo_livro})`}</h3>
+        <div className="BookCard-content-img">
+          <img src={imgs[e.codigo_livro - 1]} alt={`Capa do Livro ${e.titulo_livro}`} className='BookCard-cape' />
+        </div>
+        <div className="BookCard-container-info">
 
-        <h4>{`Autor: ${e.autor}`}</h4>
+          <div className="BookCard-content-info">
+            <h3>{`Título: ${e.titulo_livro} (${e.codigo_livro})`}</h3>
 
-        <img src={imgs[e.codigo_livro - 1]} alt={`Capa do Livro ${e.titulo_livro}`} className='BookCard-cape' />
+            <h4>{`Autor: ${e.autor}`}</h4>
 
-        <h4>{`Preço: R$ ${parseInt(e.preco_livro)},00`}</h4>
+            <h4>{`Descrição: ${e.descricao}`}</h4>
 
-        <button className="BookCard-button">
-          Ampliar Imagem
-        </button>
+            <h4>{`Preço: R$ ${parseInt(e.preco_livro)},00`}</h4>
+          </div>
+
+          <div className='BookCard-content-button'>
+            <button className="BookCard-button">
+              Ampliar Imagem
+            </button>
+          </div>
+
+        </div>
       </div>
     )
+
+    // return (
+    //   <div className="BookCard-content">
+    //     <div className="BookCard-content-img">
+    //       <text>bbbbbb</text>
+    //     </div>
+    //     <div className="BookCard-content-info">
+    //       <text>aaaaa</text>
+    //     </div>
+    //   </div>
+    // )
   })
 
   return (
