@@ -16,7 +16,7 @@ function RegisterUser() {
         axios.post('https://reqres.in/api/users', user)
             .then((response) => {
                 console.log(response)
-                alert(JSON.stringify(response.data))
+                // alert(JSON.stringify(response.data))
             }).catch((error) => {console.log(error); alert(error)})
 
     }

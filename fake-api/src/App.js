@@ -1,5 +1,5 @@
 import './App.css';
-import CardUser from './components/Card';
+// import CardUser from './components/Card';
 import RegisterUser from './components/RegisterUser';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <h1> Acessando e Consumindo API ReqRes </h1>
       {/* <CardUser /> */}
-      <RegisterUser/>
+      <RegisterUser />
     </div>
   );
 }
