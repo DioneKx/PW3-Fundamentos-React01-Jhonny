@@ -1,0 +1,9 @@
+.NavBar-list {
+    display: flex;
+    list-style: none;
+}
+
+.NavBar-item {
+    margin-right: 1em;
+    /* "em" pega o valor padrão utilizado pelos "containers pai" ou, caso não tenha neles, pega do navegador */
+}
