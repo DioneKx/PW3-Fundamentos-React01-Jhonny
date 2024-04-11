@@ -1,25 +1,46 @@
 {
-    "books": [],
-    "categories": [
-        {
-            "id": 1,
-            "name": "Ficção Cientifica"
-        },
-        {
-            "id": 2,
-            "name": "Back-End"
-        },
-        {
-            "id": 3,
-            "name": "Front-End"
-        },
-        {
-            "id": 4,
-            "name": "Banco-End"
-        },
-        {
-            "id": 5,
-            "name": "Cloud Computing"
-        }
-    ]
+  "books": [
+    {
+      "id": "48c1",
+      "title": "juniores",
+      "author": "Junior JR.",
+      "description": "Juniores sendo Juniors em testes feito pro JR's.",
+      "category": {
+        "id": "1",
+        "name": "Ficção Cientifica"
+      }
+    },
+    {
+      "id": "f1da",
+      "title": "juniores",
+      "author": "Junior JR.",
+      "description": "Juniores sendo Juniors em testes feito pro JR's.",
+      "category": {
+        "id": "1",
+        "name": "Ficção Cientifica"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Ficção Cientifica"
+    },
+    {
+      "id": 2,
+      "name": "Back-End"
+    },
+    {
+      "id": 3,
+      "name": "Front-End"
+    },
+    {
+      "id": 4,
+      "name": "Banco de Dados"
+    },
+    {
+      "id": 5,
+      "name": "Cloud Computing"
+    }
+  ]
 }
