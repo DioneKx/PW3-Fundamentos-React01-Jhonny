@@ -1,9 +1,8 @@
 import * as React from 'react'
+import './style.css'
 import { Input } from '../../components/Input'
 import { Select } from '../../components/Select'
 import { useNavigate } from 'react-router-dom'
-
-import './style.css'
 
 export function NewBook() {
 
@@ -56,7 +55,12 @@ export function NewBook() {
     ).then(
       (data) => {
         console.log(data)
-        navigate('/books', data)
+        navigate('/books', {
+          state: {
+            message: "Livro cadastrado com SUCESSO!",
+            type: "success"
+          }
+        })
       }
     ).catch(
       (error) => console.log(error)
@@ -74,7 +78,6 @@ export function NewBook() {
           id="title"
           placeholder="Digite o titulo do livro"
           text="Digite o titulo do livro"
-          // value={book}
           handlerOnChange={handlerOnChangeBook}
         />
 

@@ -11,10 +11,10 @@
       }
     },
     {
-      "id": "f1da",
-      "title": "juniores",
-      "author": "Junior JR.",
-      "description": "Juniores sendo Juniors em testes feito pro JR's.",
+      "id": "03f8",
+      "title": "Ameniczando",
+      "author": "Amenic",
+      "description": "Isso ai",
       "category": {
         "id": "1",
         "name": "Ficção Cientifica"
@@ -23,23 +23,23 @@
   ],
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Ficção Cientifica"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Back-End"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Front-End"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Banco de Dados"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Cloud Computing"
     }
   ]
