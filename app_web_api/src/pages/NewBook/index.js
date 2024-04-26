@@ -22,7 +22,6 @@ export function NewBook() {
         (res) => res.json()
       ).then((data) => {
         setCategories(data)
-        console.log(data)
       }).catch(
         (error) => console.log(error)
       )
@@ -54,7 +53,6 @@ export function NewBook() {
       (res) => res.json()
     ).then(
       (data) => {
-        console.log(data)
         navigate('/books', {
           state: {
             message: "Livro cadastrado com SUCESSO!",
@@ -95,7 +93,7 @@ export function NewBook() {
           name="description"
           id="description"
           placeholder="Digite a descricao do livro"
-          text="digite a descricao do livro"
+          text="Digite a descricao do livro"
           handlerOnChange={handlerOnChangeBook}
         />
 
@@ -105,7 +103,7 @@ export function NewBook() {
           options={categories}
           handlerOnChange={handlerOnChangeSelect}
           // value={}
-          text="testando"
+          text="Escolha a categoria"
         />
 
         <button type='submit'>Enviar</button>

@@ -26,6 +26,7 @@
 .category_text{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .category_text span{
