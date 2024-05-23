@@ -1,20 +1,10 @@
 {
   "books": [
     {
-      "id": "48c1",
-      "title": "juniores",
-      "author": "Junior JR.",
-      "description": "Juniores sendo Juniors em testes feito pro JR's.",
-      "category": {
-        "id": "1",
-        "name": "Ficção Cientifica"
-      }
-    },
-    {
       "id": "03f8",
-      "title": "Ameniczando",
-      "author": "Amenic",
-      "description": "Isso ai",
+      "title": "Ameniczador",
+      "author": "Ameniczando VII",
+      "description": "Isso ai (test)",
       "category": {
         "id": "1",
         "name": "Ficção Cientifica"

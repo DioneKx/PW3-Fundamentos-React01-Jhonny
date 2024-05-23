@@ -1,14 +1,14 @@
 import * as React from 'react'
 import './style.css'
 
-export function BookCard({ id, book, author, category }) {
+import { Link } from 'react-router-dom';
 
-    // const cards = books.map((e) => (
-    //     <div id={e.id} key={e.id} className='book_card'>
-    //         <h4>{e.title}</h4>
-    //         <p>{e.author}</p>
-    //     </div>
-    // ))
+export function BookCard({ id, book, author, category, handlerDelete }) {
+
+    const bookDelete = (event) => {
+        event.preventDefault();
+        handlerDelete(id);
+    }
 
     return (
         <div className='book_card' id={id} key={id}>
@@ -19,6 +19,18 @@ export function BookCard({ id, book, author, category }) {
                 <span></span>
                 Categoria: {category.name}
             </p>
+
+            <div className="book_card_actions">
+
+                <Link to={`/editBook/${id}`}>
+                    Editar
+                </Link>
+
+                <button onClick={bookDelete}>
+                    Excluir
+                </button>
+                
+            </div>
         </div>
     )
 }

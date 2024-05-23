@@ -7,6 +7,7 @@ import { Container } from './components/Container';
 import { Home } from './pages/Home'
 import { Books } from './pages/Books'
 import { NewBook } from './pages/NewBook'
+import { BookEdit } from './pages/BookEdit';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route index element={<Home />} />
               <Route path='/newbooks' element={<NewBook />} />
               <Route path='/books' element={<Books />} />
+              <Route path='/editBook/:id' element={<BookEdit />} />
             </Route>
           </Routes>
         </Container>

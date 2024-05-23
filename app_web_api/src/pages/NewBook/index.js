@@ -102,7 +102,6 @@ export function NewBook() {
           id="category"
           options={categories}
           handlerOnChange={handlerOnChangeSelect}
-          // value={}
           text="Escolha a categoria"
         />
 
