@@ -25,16 +25,19 @@ export function Books() {
 
   React.useEffect(() => {
     fetch(
-      'http://localhost:5000/books',
+      'http://localhost:5000/listagemLivros',
       {
         method: 'Get',
+        mode: "cors",
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Origin": "*"
         }
       }).then(
         (res) => res.json()
       ).then((data) => {
-        setBooks(data)
+        console.log(data.data)
+        setBooks(data.data)
       }).catch(
         (error) => console.log(error)
       )
@@ -42,17 +45,18 @@ export function Books() {
 
   // Função de exlusão de livro
   function bookDelete(id) {
-
-    fetch(`http://localhost:5000/books/${id}`, {
+    fetch(`http://localhost:5000/excluirLivro/${id}`, {
       method: 'DELETE',
+      mode: "cors",
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*"
       },
     })
       .then(resp => resp.json())
       .then(
         (data) => {
-          setBooks(books.filter((book_data) => book_data.id !== id))
+          setBooks(books.filter((book_data) => book_data.cod_livro !== id))
           setMessage({
             msg: 'Livro exluído com sucesso!',
             type: 'success'
@@ -75,7 +79,7 @@ export function Books() {
 
       {books.length > 0 ? books.map((e, index) => {
         return (
-          <BookCard id={e.id} key={e.id} book={e.title} author={e.author} category={e.category} handlerDelete={bookDelete} />
+          <BookCard id={e.cod_livro} key={e.cod_livro} book={e.nome_livro} author={e.autor_livro} category={""} handlerDelete={bookDelete} />
         )
       }) : <></>}
     </section>
