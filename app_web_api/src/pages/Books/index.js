@@ -50,7 +50,8 @@ export function Books() {
       mode: "cors",
       headers: {
         'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "*",
       },
     })
       .then(resp => resp.json())
@@ -77,11 +78,13 @@ export function Books() {
         />
       }
 
-      {books.length > 0 ? books.map((e, index) => {
-        return (
-          <BookCard id={e.cod_livro} key={e.cod_livro} book={e.nome_livro} author={e.autor_livro} category={""} handlerDelete={bookDelete} />
-        )
-      }) : <></>}
+      <div className='books_card_container'>
+        {books.length > 0 ? books.map((e, index) => {
+          return (
+            <BookCard id={e.cod_livro} key={e.cod_livro} book={e.nome_livro} author={e.autor_livro} description={e.descricao_livro} handlerDelete={bookDelete} />
+          )
+        }) : <></>}
+      </div>
     </section>
   )
 }

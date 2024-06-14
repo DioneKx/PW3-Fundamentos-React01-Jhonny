@@ -13,40 +13,43 @@ export function BookEdit() {
     const navigate = useNavigate()
 
     /* State de dados das categorias vindas do aqruivo db,json */
-    const [categories, setCategories] = React.useState([]);
+    // const [categories, setCategories] = React.useState([]);
     const [book, setBook] = React.useState({})
 
 
-    /* Recupera os dados de categoria do arquivo db,json */
-    React.useEffect(() => {
-        fetch(
-            'http://localhost:5000/categories',
-            {
-                method: 'get',
-                headers: {
-                    'content-type': 'application/json'
-                }
-            }).then(
-                (resp) => resp.json()
-            ).then((data) => {
-                setCategories(data);
-                console.log(data);
-            }).catch((error) => {
-                console.log(error);
-            })
-    }, [])
+    // /* Recupera os dados de categoria do arquivo db,json */
+    // React.useEffect(() => {
+    //     fetch(
+    //         'http://localhost:5000/categories',
+    //         {
+    //             method: 'get',
+    //             headers: {
+    //                 'content-type': 'application/json'
+    //             }
+    //         }).then(
+    //             (resp) => resp.json()
+    //         ).then((data) => {
+    //             setCategories(data);
+    //             console.log(data);
+    //         }).catch((error) => {
+    //             console.log(error);
+    //         })
+    // }, [])
 
     // Recuperando os dados de livro para edição
     React.useEffect(() => {
-        fetch(`http://localhost:5000/books/${id}`, {
+        fetch(`http://localhost:5000/listagemLivro/${id}`, {
             method: 'GET',
+            mode: "cors",
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
             },
         }).then(
             (resp) => resp.json()
         ).then((data) => {
-            setBook(data);
+            setBook(data.data);
             console.log(data)
         }).catch((error) => {
             console.log(error)
@@ -60,30 +63,22 @@ export function BookEdit() {
         setBook({ ...book, [event.target.name]: event.target.value });
     }
 
-    /* Handler de captura dos dados de Select (id e categoria) */
-    function handlerChangeCategory(event) {
-        setBook({
-            ...book, category: {
-                id: event.target.value,
-                name: event.target.options[event.target.selectedIndex].text
-
-            }
-        });
-    }
-
     function handlerOnSubmitEdit(e) {
         e.preventDefault()
 
-        fetch(`http://localhost:5000/books/${book.id}`, {
-            method: 'PATCH',
+        fetch(`http://localhost:5000/alterarLivro`, {
+            method: 'PUT',
+            mode: "cors",
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "*",
             },
             body: JSON.stringify(book)
         }).then(
             (resp) => resp.json()
         ).then((data) => {
-            setBook(data)
+            console.log(data)
             navigate('/books', {
                 state: {
                     message: "Livro alterado com SUCESSO!",
@@ -104,41 +99,41 @@ export function BookEdit() {
 
                 <Input
                     type="text"
-                    name="title"
+                    name="nome_livro"
                     id="title"
                     placeholder="Digite o titulo do livro"
                     text="Digite o titulo do livro"
-                    value={book.title}
+                    value={book.nome_livro}
                     handlerOnChange={handlerOnChangeBook}
                 />
 
                 <Input
                     type="text"
-                    name="author"
+                    name="autor_livro"
                     id="author"
                     placeholder="Digite o nome do autor"
                     text="Digite o nome do autor"
-                    value={book.author}
+                    value={book.autor_livro}
                     handlerOnChange={handlerOnChangeBook}
                 />
 
                 <Input
                     type="text"
-                    name="description"
+                    name="descricao_livro"
                     id="description"
                     placeholder="Digite a descricao do livro"
                     text="digite a descricao do livro"
-                    value={book.description}
+                    value={book.descricao_livro}
                     handlerOnChange={handlerOnChangeBook}
                 />
 
-                <Select
+                {/* <Select
                     name="category"
                     id="category"
                     text="Selecione a categoria do livro"
                     options={categories}
                     handlerOnChange={handlerChangeCategory}
-                />
+                /> */}
 
                 <p><input type='submit' value="Editar" /></p>
 

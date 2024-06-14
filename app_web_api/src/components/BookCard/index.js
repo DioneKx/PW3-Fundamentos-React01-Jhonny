@@ -3,7 +3,7 @@ import './style.css'
 
 import { Link } from 'react-router-dom';
 
-export function BookCard({ id, book, author, category, handlerDelete }) {
+export function BookCard({ id, book, author, description, handlerDelete }) {
 
     const bookDelete = (event) => {
         event.preventDefault();
@@ -15,10 +15,8 @@ export function BookCard({ id, book, author, category, handlerDelete }) {
             <h4>{book}</h4>
 
             <p>Autor: {author}</p>
-            <p className='category_text'>
-                <span></span>
-                Categoria: {category.name}
-            </p>
+
+            <p>Descrição: {description}</p>
 
             <div className="book_card_actions">
 
@@ -29,7 +27,7 @@ export function BookCard({ id, book, author, category, handlerDelete }) {
                 <button onClick={bookDelete}>
                     Excluir
                 </button>
-                
+
             </div>
         </div>
     )
